@@ -13,6 +13,7 @@
 	</div>
 	<div
 		style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
+
 <?php
 date_default_timezone_set ( 'Asia/Jakarta' );
 echo date ( 'd M Y' );
@@ -22,9 +23,13 @@ $id_user = $this->session->userdata ( 'id' );
 $user_login = $this->user_model->detail ( $id_user );
 
 ?>
+
 &nbsp; 
+Selamat Datang
 <a href="<?php echo base_url('admin/dasbor/profil')?>"
-			class="btn btn-danger square-btn-adjust"><i class="fa fa-user"></i><?php echo $user_login->nama?></a>
+			class="btn btn-danger square-btn-adjust">
+			
+			<i class="fa fa-user"> </i><?php echo $user_login->nama?></a>
 		<a href="<?php echo base_url('login/logout')?>"
 			class="btn btn-danger square-btn-adjust">Logout <i
 			class="fa fa-sign-out"></i></a>

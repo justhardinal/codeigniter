@@ -10,16 +10,16 @@
     <!-- Icon -->
     <link href="<?php echo base_url('assets/upload/image/'.$site_config->icon)?>" rel="shortcut icon">
 	<!-- BOOTSTRAP STYLES-->
-    <link href="<?php echo base_url() ?>assets/admin/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="<?php echo base_url('assets/admin/assets/css/bootstrap.css') ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="<?php echo base_url() ?>assets/admin/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?php echo base_url('assets/admin/assets/css/font-awesome.css') ?>" rel="stylesheet" />
        
     <!-- CUSTOM STYLES-->
-    <link href="<?php echo base_url() ?>assets/admin/assets/css/custom.css" rel="stylesheet" />
+    <link href="<?php echo base_url('assets/admin/assets/css/custom.cs') ?>s" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
      <!-- TABLE STYLES-->
-    <link href="<?php echo base_url() ?>assets/admin/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="<?php echo base_url('assets/admin/assets/js/dataTables/dataTables.bootstrap.css') ?>" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">

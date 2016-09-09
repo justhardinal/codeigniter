@@ -59,13 +59,12 @@
             </div>            
         </nav>  
         <!-- /. NAV SIDE  -->
+        
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2><?php echo $title?></h2>   
-                        <h5>Welcome</h5>
-                       
+                     <h2><?php echo $title?></h2>                       
                     </div>
                 </div>
                  <!-- /. ROW  -->

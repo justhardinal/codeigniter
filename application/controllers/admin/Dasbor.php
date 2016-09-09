@@ -6,12 +6,14 @@ class Dasbor extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('konfigurasi_model');
+		$this->load->model('user_model');
 	}
 	
 
     //index 
     public function index(){
-        $data = array( 'title' => 'Halaman Dasbor',
+    	
+        $data = array( 'title' => 'Selamat Datang ',
                        'isi'   => 'admin/dasbor/home');
         $this->load->view('admin/layout/wrapper',$data);
     }
