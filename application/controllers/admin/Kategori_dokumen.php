@@ -28,7 +28,11 @@ class Kategori_dokumen extends CI_Controller {
         $data = array( 'title' 			  => 'Kategori Dokumen',
                        'kategori_dokumen'  => $kategori_dokumen,
                        'isi'   			  => 'admin/kategori_dokumen/list');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
         //masuk database
         }else{
        	$i=$this->input;
@@ -66,7 +70,11 @@ class Kategori_dokumen extends CI_Controller {
     		$data = array( 'title' 			  => 'Edit Kategori Dokumen',
     				'kategori_dokumen'  		  => $kategori_dokumen,
     				'isi'   			      => 'admin/kategori_dokumen/edit');
-    		$this->load->view('admin/layout/wrapper',$data);
+    		$this->load->view('admin/layout/head',$data);
+			$this->load->view('admin/layout/header',$data);
+			$this->load->view('admin/layout/nav',$data);
+			$this->load->view('admin/layout/content',$data);
+			$this->load->view('admin/layout/footer',$data);	
     		//masuk database
     	}else{
     		$i=$this->input;

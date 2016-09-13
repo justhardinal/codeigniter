@@ -29,7 +29,7 @@ Selamat Datang
 <a href="<?php echo base_url('admin/dasbor/profil')?>"
 			class="btn btn-danger square-btn-adjust">
 			
-			<i class="fa fa-user"> </i><?php echo $user_login->nama?></a>
+			<i class="fa fa-user"> </i> <?php echo $user_login->nama?></a>
 		<a href="<?php echo base_url('login/logout')?>"
 			class="btn btn-danger square-btn-adjust">Logout <i
 			class="fa fa-sign-out"></i></a>

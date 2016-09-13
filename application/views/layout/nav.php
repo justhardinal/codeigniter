@@ -47,6 +47,12 @@ border-radius: 10px;
                         <a href="<?php echo base_url('document') ?>">DOCUMENT</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="<?php echo base_url('galeri') ?>">GALLERY</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="<?php echo base_url('video') ?>">VIDEO</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="<?php echo base_url('contact') ?>">CONTACT</a>
                     </li>
                     <?php if($this->session->userdata('username') != "") { ?>

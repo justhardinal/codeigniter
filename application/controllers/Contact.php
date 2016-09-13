@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Contact extends CI_Controller {
 
 	//loading database
 	public function __construct(){
@@ -20,12 +20,13 @@ class Home extends CI_Controller {
 		$slider = $this->galeri_model->home();
 		$video  = $this->video_model->video_homepage();
 		
-		$data =array('title' 	=> $site->namaweb.' | '.$site->tagline,
+		$data =array('title' 	=> 'Kontak - '.$site->namaweb.' | '.$site->tagline,
 					 'header'	=>  $header,
 					 'berita'	=>  $berita,
 					 'slider'	=>  $slider,
 					 'video'	=>  $video,	
-					 'isi'		=> 'home/list'
+					 'site'		=>  $site,
+					 'isi'		=> 'home/contact'
 		);
 		$this->load->view('layout/head',$data);
 		$this->load->view('layout/nav',$data);

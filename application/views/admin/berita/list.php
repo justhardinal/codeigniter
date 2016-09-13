@@ -19,6 +19,7 @@ if($this->session->flashdata('sukses')){
               <th>Judul</th>
               <th>Kategori</th>
               <th>Author</th>
+              <th>Jenis Berita</th>
               <th></th>
           </tr>
       </thead>

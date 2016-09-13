@@ -15,7 +15,11 @@ class Site extends CI_Controller {
         $data = array( 'title' => 'Site',
                        'site'  => $site,
                        'isi'   => 'admin/site/list');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
     }
 
 
@@ -40,7 +44,7 @@ class Site extends CI_Controller {
         //masuk database
         }else{
             $i= $this->input;
-            $data=array (   'id_user'           => 1,
+            $data=array (   'id_user'           => $this->session->userdata('id'),
                             'nama_site'         => $i->post('nama_site'),
                             'contact_person'    => $i->post('contact_person'),
                             'alamat'            => $i->post('alamat'),
@@ -78,12 +82,17 @@ class Site extends CI_Controller {
         $data = array( 'title' => 'Edit Site',
                        'site'  => $site,
                        'isi'   => 'admin/site/edit');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
 
         //masuk database
         }else{
             $i= $this->input;
-            $data=array (   'id_user'           => 1,
+            $data=array (   'id_site'			=> $id_site,
+            				'id_user'           => $this->session->userdata('id'),
                             'nama_site'         => $i->post('nama_site'),
                             'contact_person'    => $i->post('contact_person'),
                             'alamat'            => $i->post('alamat'),
@@ -94,7 +103,7 @@ class Site extends CI_Controller {
                             'keterangan'        => $i->post('keterangan')
                         );
             $this->site_model->edit($data);
-            $this->session->set_flashdata('sukses','Data Site Telah Tersimpan');
+            $this->session->set_flashdata('sukses','Data Site Telah Terupdate');
             redirect (base_url('admin/site'));
         }
         //end masuk database

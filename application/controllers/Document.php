@@ -26,7 +26,11 @@ class Document extends CI_Controller {
 					 'dokumen'	=>  $dokumen,
 					 'isi'		=> 'document/list'
 		);
-		$this->load->view('layout/wrapper',$data);
+		$this->load->view('layout/head',$data);
+		$this->load->view('layout/nav',$data);
+		$this->load->view('layout/content',$data);
+		$this->load->view('layout/footer',$data);
+		
 		
 	}
 	
@@ -40,7 +44,7 @@ class Document extends CI_Controller {
 			$dokumen=$this->dokumen_model->kategori($id_kategori_dokumen);
 		}else{
 			//jika tidak login yang tampil external
-			$dokumen = $this->dokumen_model->kategori_external($id_kategori_dokumen);
+			$dokumen = $this->dokumen_model->kategori_eksternal($id_kategori_dokumen);
 		}
 	
 	

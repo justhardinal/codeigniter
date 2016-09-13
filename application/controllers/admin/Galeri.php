@@ -16,7 +16,11 @@ class Galeri extends CI_Controller {
 		$data 	= array('title' 			=> 'Data Galeri',
 						'galeri'			=> $galeri,
 						'isi'				=> 'admin/galeri/list');
-		$this->load->view('admin/layout/wrapper',$data);		
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);			
 	}
 	
 	//tambah
@@ -72,7 +76,11 @@ class Galeri extends CI_Controller {
 			// End masuk database
 		$data 	= array('title' 			=> 'Data Galeri',
 						'isi'				=> 'admin/galeri/tambah');
-		$this->load->view('admin/layout/wrapper',$data);
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
 	}
 	
 	//edit
@@ -98,7 +106,11 @@ class Galeri extends CI_Controller {
 						'galeri'			=> $galeri,
 						'error'				=> $this->upload->display_errors(),
 						'isi'				=> 'admin/galeri/edit');
-				$this->load->view('admin/layout/wrapper',$data);
+				$this->load->view('admin/layout/head',$data);
+				$this->load->view('admin/layout/header',$data);
+				$this->load->view('admin/layout/nav',$data);
+				$this->load->view('admin/layout/content',$data);
+				$this->load->view('admin/layout/footer',$data);	
 					
 				// Masuk database
 			}else{

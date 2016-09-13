@@ -2,13 +2,11 @@
 //validasi input
 echo validation_errors('<div class="alert alert-warning">','</div>');
 
-
 //open form
 echo form_open(base_url('admin/site/tambah'));
 ?>
 <p><a href="<?php echo base_url('admin/site') ?>" class="btn btn-success"><i class="fa fa-undo"> Kembali</i></a>
 </p>
-
 <div class="col-md-6">
     <div class="form-group">
         <label>Nama Site</label>

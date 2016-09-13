@@ -11,6 +11,16 @@ class Video_model extends CI_Model {
         public function listing(){
             $query=$this->db->get('video');
             return $query->result();
+        }        
+        //list video
+        public function video(){
+        	$this->db->select('video.*,users.nama');
+        	$this->db->from('video');
+        	$this->db->join('users', 'users.id_user=video.id_user', 'LEFT');
+        	$this->db->order_by('id_video','DESC');
+        	$this->db->limit(20);
+        	$query=$this->db->get();
+        	return $query->result();
         }
         
         //list homepage

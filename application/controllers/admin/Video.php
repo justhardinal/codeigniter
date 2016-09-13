@@ -32,7 +32,11 @@ class Video extends CI_Controller {
         $data = array( 'title' 			  => 'Video',
                        'video'  		  => $video,
                        'isi'   			  => 'admin/video/list');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
         //masuk database
         }else{
        	$i=$this->input;

@@ -28,7 +28,11 @@ class Kategori_berita extends CI_Controller {
         $data = array( 'title' 			  => 'Kategori Berita',
                        'kategori_berita'  => $kategori_berita,
                        'isi'   			  => 'admin/kategori_berita/list');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
         //masuk database
         }else{
        	$i=$this->input;
@@ -66,7 +70,11 @@ class Kategori_berita extends CI_Controller {
     		$data = array( 'title' 			  => 'Edit Kategori Berita',
     				'kategori_berita'  		  => $kategori_berita,
     				'isi'   			      => 'admin/kategori_berita/edit');
-    		$this->load->view('admin/layout/wrapper',$data);
+    		$this->load->view('admin/layout/head',$data);
+			$this->load->view('admin/layout/header',$data);
+			$this->load->view('admin/layout/nav',$data);
+			$this->load->view('admin/layout/content',$data);
+			$this->load->view('admin/layout/footer',$data);	
     		//masuk database
     	}else{
     		$i=$this->input;

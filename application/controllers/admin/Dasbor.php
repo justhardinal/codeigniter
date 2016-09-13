@@ -15,7 +15,11 @@ class Dasbor extends CI_Controller {
     	
         $data = array( 'title' => 'Selamat Datang ',
                        'isi'   => 'admin/dasbor/home');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
     }
     
     
@@ -34,7 +38,11 @@ class Dasbor extends CI_Controller {
     	$data = array( 'title' 			=> 'Halaman Dasbor',
     				   'konfigurasi'	=> $konfigurasi,
                        'isi'   			=> 'admin/dasbor/umum');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
           
        	}else{
        		$i=$this->input;
@@ -78,7 +86,11 @@ class Dasbor extends CI_Controller {
     					'error'				=> $this->upload->display_errors(),
     					'konfigurasi'		=> $konfigurasi,
     					'isi'				=> 'admin/dasbor/icon');
-    			$this->load->view('admin/layout/wrapper',$data);
+    			$this->load->view('admin/layout/head',$data);
+				$this->load->view('admin/layout/header',$data);
+				$this->load->view('admin/layout/nav',$data);
+				$this->load->view('admin/layout/content',$data);
+				$this->load->view('admin/layout/footer',$data);
     
     			// Masuk database
     		}else{
@@ -111,7 +123,11 @@ class Dasbor extends CI_Controller {
     	$data 	= array('title' 			=> 'Data Galeri',
 		    			'konfigurasi'		=> $konfigurasi,
 		    			'isi'				=> 'admin/dasbor/icon');
-    	$this->load->view('admin/layout/wrapper',$data);
+    	$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
     }
     
     
@@ -134,7 +150,11 @@ class Dasbor extends CI_Controller {
     					'error'				=> $this->upload->display_errors(),
     					'konfigurasi'		=> $konfigurasi,
     					'isi'				=> 'admin/dasbor/logo');
-    			$this->load->view('admin/layout/wrapper',$data);
+    			$this->load->view('admin/layout/head',$data);
+				$this->load->view('admin/layout/header',$data);
+				$this->load->view('admin/layout/nav',$data);
+				$this->load->view('admin/layout/content',$data);
+				$this->load->view('admin/layout/footer',$data);
     				
     			// Masuk database
     		}else{
@@ -167,6 +187,10 @@ class Dasbor extends CI_Controller {
     	$data 	= array('title' 			=> 'Data Galeri',
     					'konfigurasi'		=> $konfigurasi,
     					'isi'				=> 'admin/dasbor/logo');
-    	$this->load->view('admin/layout/wrapper',$data);
+    	$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
     }
 }

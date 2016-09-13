@@ -17,7 +17,11 @@ class Dokumen extends CI_Controller {
 		$data 	= array('title' 			=> 'Data Dokumen',
 						'dokumen'			=> $dokumen,
 						'isi'				=> 'admin/dokumen/list');
-		$this->load->view('admin/layout/wrapper',$data);		
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);			
 	}
 	
 	//tambah
@@ -44,7 +48,11 @@ class Dokumen extends CI_Controller {
 							'kategori_dokumen' 	=> $kategori_dokumen,
 							'error'				=> $this->upload->display_errors(),
 							'isi'				=> 'admin/dokumen/tambah');
-			$this->load->view('admin/layout/wrapper',$data);
+			$this->load->view('admin/layout/head',$data);
+			$this->load->view('admin/layout/header',$data);
+			$this->load->view('admin/layout/nav',$data);
+			$this->load->view('admin/layout/content',$data);
+			$this->load->view('admin/layout/footer',$data);	
 			
 			// Masuk database
 			}else{
@@ -72,7 +80,11 @@ class Dokumen extends CI_Controller {
 		$data 	= array('title' 			=> 'Data Dokumen',
 						'kategori_dokumen' 	=> $kategori_dokumen,
 						'isi'				=> 'admin/dokumen/tambah');
-		$this->load->view('admin/layout/wrapper',$data);
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
 	}
 	
 	//edit
@@ -104,7 +116,11 @@ class Dokumen extends CI_Controller {
 						'dokumen'			=> $dokumen,
 						'error'				=> $this->upload->display_errors(),
 						'isi'				=> 'admin/dokumen/edit');
-				$this->load->view('admin/layout/wrapper',$data);
+				$this->load->view('admin/layout/head',$data);
+				$this->load->view('admin/layout/header',$data);
+				$this->load->view('admin/layout/nav',$data);
+				$this->load->view('admin/layout/content',$data);
+				$this->load->view('admin/layout/footer',$data);	
 					
 				// Masuk database
 			}else{
@@ -152,7 +168,11 @@ class Dokumen extends CI_Controller {
 				'kategori_dokumen' 	=> $kategori_dokumen,
 				'dokumen'			=> $dokumen,
 				'isi'				=> 'admin/dokumen/edit');
-		$this->load->view('admin/layout/wrapper',$data);
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
 	}
 	
 	

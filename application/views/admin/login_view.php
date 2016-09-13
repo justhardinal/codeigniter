@@ -7,14 +7,14 @@
 <title><?php echo $title ?></title>
 <!-- BOOTSTRAP STYLES-->
 <link
-	href="<?php echo base_url() ?>assets/admin/assets/css/bootstrap.css"
+	href="<?php echo base_url('assets/admin/assets/css/bootstrap.css') ?>"
 	rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
 <link
-	href="<?php echo base_url() ?>assets/admin/assets/css/font-awesome.css"
+	href="<?php echo base_url('assets/admin/assets/css/font-awesome.css') ?>"
 	rel="stylesheet" />
 <!-- CUSTOM STYLES-->
-<link href="<?php echo base_url() ?>assets/admin/assets/css/custom.css"
+<link href="<?php echo base_url('assets/admin/assets/css/custom.css') ?>"
 	rel="stylesheet" />
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
@@ -92,15 +92,15 @@
 	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 	<!-- JQUERY SCRIPTS -->
 	<script
-		src="<?php echo base_url() ?>assets/adminl/assets/js/jquery-1.10.2.js"></script>
+		src="<?php echo base_url('assets/adminl/assets/js/jquery-1.10.2.js') ?>"></script>
 	<!-- BOOTSTRAP SCRIPTS -->
 	<script
-		src="<?php echo base_url() ?>assets/admin/assets/js/bootstrap.min.js"></script>
+		src="<?php echo base_url('assets/admin/assets/js/bootstrap.min.js') ?>"></script>
 	<!-- METISMENU SCRIPTS -->
 	<script
-		src="<?php echo base_url() ?>assets/admin/assets/js/jquery.metisMenu.js"></script>
+		src="<?php echo base_url('assets/admin/assets/js/jquery.metisMenu.js') ?>"></script>
 	<!-- CUSTOM SCRIPTS -->
-	<script src="<?php echo base_url() ?>assets/admin/assets/js/custom.js"></script>
+	<script src="<?php echo base_url('assets/admin/assets/js/custom.js') ?>"></script>
 
 </body>
 </html>

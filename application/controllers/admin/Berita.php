@@ -17,7 +17,11 @@ class Berita extends CI_Controller {
 		$data 	= array('title' 			=> 'Data Berita',
 						'berita'			=> $berita,
 						'isi'				=> 'admin/berita/list');
-		$this->load->view('admin/layout/wrapper',$data);		
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);		
 	}
 	
 	//tambah
@@ -44,7 +48,11 @@ class Berita extends CI_Controller {
 							'kategori_berita' 	=> $kategori_berita,
 							'error'				=> $this->upload->display_errors(),
 							'isi'				=> 'admin/berita/tambah');
-			$this->load->view('admin/layout/wrapper',$data);
+			$this->load->view('admin/layout/head',$data);
+			$this->load->view('admin/layout/header',$data);
+			$this->load->view('admin/layout/nav',$data);
+			$this->load->view('admin/layout/content',$data);
+			$this->load->view('admin/layout/footer',$data);
 			
 			// Masuk database
 			}else{
@@ -86,7 +94,11 @@ class Berita extends CI_Controller {
 		$data 	= array('title' 			=> 'Data Berita',
 						'kategori_berita' 	=> $kategori_berita,
 						'isi'				=> 'admin/berita/tambah');
-		$this->load->view('admin/layout/wrapper',$data);
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
 	}
 	
 	//edit
@@ -118,7 +130,11 @@ class Berita extends CI_Controller {
 						'berita'			=> $berita,
 						'error'				=> $this->upload->display_errors(),
 						'isi'				=> 'admin/berita/edit');
-				$this->load->view('admin/layout/wrapper',$data);
+				$this->load->view('admin/layout/head',$data);
+				$this->load->view('admin/layout/header',$data);
+				$this->load->view('admin/layout/nav',$data);
+				$this->load->view('admin/layout/content',$data);
+				$this->load->view('admin/layout/footer',$data);	
 					
 				// Masuk database
 			}else{
@@ -180,7 +196,11 @@ class Berita extends CI_Controller {
 				'kategori_berita' 	=> $kategori_berita,
 				'berita'			=> $berita,
 				'isi'				=> 'admin/berita/edit');
-		$this->load->view('admin/layout/wrapper',$data);
+		$this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);
 	}
 	
 	

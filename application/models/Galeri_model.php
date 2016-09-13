@@ -17,8 +17,18 @@ class Galeri_model extends CI_Model {
             return $query->result();
         }
         
+        //list data
+        public function galeri(){
+        	$this->db->select('galeri.*,users.nama');
+        	$this->db->from('galeri');
+        	$this->db->join('users', 'users.id_user=galeri.id_user', 'LEFT');
+        	$this->db->order_by('id_galeri','DESC');
+        	$this->db->limit(50);
+        	$query=$this->db->get();
+        	return $query->result();
+        }
         //list homepage
-        public function homepage_slide(){
+        public function home(){
         	$this->db->select('galeri.*,users.nama');
         	$this->db->from('galeri');
         	$this->db->join('users', 'users.id_user=galeri.id_user', 'LEFT');

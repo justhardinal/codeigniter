@@ -17,7 +17,10 @@ class News extends CI_Controller {
 					 'berita'	=>  $berita,
 					 'isi'		=> 'news/list'
 		);
-		$this->load->view('layout/wrapper',$data);
+		$this->load->view('layout/head',$data);
+		$this->load->view('layout/nav',$data);
+		$this->load->view('layout/content',$data);
+		$this->load->view('layout/footer',$data);
 		
 	}
 	
@@ -28,7 +31,10 @@ class News extends CI_Controller {
 					 'berita'	=>  $berita,
 					 'isi'		=> 'news/detail'
 		);
-		$this->load->view('layout/wrapper',$data);
+		$this->load->view('layout/head',$data);
+		$this->load->view('layout/nav',$data);
+		$this->load->view('layout/content',$data);
+		$this->load->view('layout/footer',$data);
 		
 	}
 	

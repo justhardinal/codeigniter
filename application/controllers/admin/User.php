@@ -17,7 +17,11 @@ class User extends CI_Controller {
         $data = array( 'title' => 'Administrator',
                        'user'  =>$user,
                        'isi'   => 'admin/user/list');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
     }
 
     //validasi password
@@ -58,7 +62,11 @@ class User extends CI_Controller {
         $data = array( 'title' => ' Tambah Administrator',
                        'site'  =>$site,
                        'isi'   => 'admin/user/tambah');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+        $this->load->view('admin/layout/header',$data);
+        $this->load->view('admin/layout/nav',$data);
+        $this->load->view('admin/layout/content',$data);
+        $this->load->view('admin/layout/footer',$data);
         //masuk database
         }else{
             $i = $this->input;
@@ -104,14 +112,18 @@ class User extends CI_Controller {
         if ($valid->run()===FALSE) {        
         //end validasi
         $data = array( 'title' => ' Edit Administrator',
-                       'site'  =>$site,
-                       'user'  =>$user,
+                       'site'  =>	$site,
+                       'user'  =>	$user,
                        'isi'   => 'admin/user/edit');
-        $this->load->view('admin/layout/wrapper',$data);
+        $this->load->view('admin/layout/head',$data);
+		$this->load->view('admin/layout/header',$data);
+		$this->load->view('admin/layout/nav',$data);
+		$this->load->view('admin/layout/content',$data);
+		$this->load->view('admin/layout/footer',$data);	
         //masuk database
         }else{
             $i = $this->input;
-            if (strlen($i->post('password')) < 6 || strlen($i->post('password')) > 32 ) {
+            if (strlen($i->post('password')) < 8 || strlen($i->post('password')) > 32 ) {
                     $data = array ( 'id_user'        =>$id_user,
                                     'nama'           =>$i->post('nama'),
                                     'email'          =>$i->post('email'),
@@ -134,9 +146,7 @@ class User extends CI_Controller {
                                 //'id_admin'       =>$i->post('nama'),
                         );
 
-            }
-
-            
+            }            
             $this->user_model->edit($data);
             $this->session->set_flashdata('sukses','data User/Administrator telah di ubah');
             redirect(base_url('admin/user'));
